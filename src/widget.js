@@ -41,11 +41,13 @@ export class Widget {
     }
 
     buildWidget () { // ():void
-        let parentEl, widgetEl
+        let parentEl = null;
+        let widgetEl = null;
         if (this.props.prebuilt) {
             parentEl = this.el.parentNode
             widgetEl = parentEl.querySelector('.' + this.props.classNames.base + '--stars')
-        } else {
+        }
+        if (null === widgetEl) {
             parentEl = insertSpanEl(this.el, false, { class: this.props.classNames.base });
             parentEl.appendChild(this.el);
             widgetEl = insertSpanEl(this.el, true, { class: this.props.classNames.base + '--stars' });
