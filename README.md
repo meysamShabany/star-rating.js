@@ -156,13 +156,14 @@ Following are the default CSS variable values for Star Rating:
     --gl-star-empty: url(../img/star-empty.svg);  /* if using background images */
     --gl-star-full: url(../img/star-full.svg);    /* if using background images */
     --gl-star-size: 24px;
+    --gl-tooltip-background: rgba(17,17,17, .9);
     --gl-tooltip-border-radius: 4px;
+    --gl-tooltip-color: #fff;
     --gl-tooltip-font-size: 0.875rem;
     --gl-tooltip-font-weight: 400;
     --gl-tooltip-line-height: 1;
     --gl-tooltip-margin: 12px;
     --gl-tooltip-padding: .5em 1em;
-    --gl-tooltip-size: 6px;
 }
 ```
 
@@ -195,6 +196,11 @@ If you need to use the Star Rating library in a unsupported browser (i.e. Intern
 All changes should be committed to the files in `src/`.
 
 ## Changelog
+
+`v4.3.1 - [2024-04-30]`
+
+- Fixed edge-case bug with prebuilt config option
+- Fixed tooltip CSS
 
 `v4.3.0 - [2022-08-05]`
 
